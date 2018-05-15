@@ -65,7 +65,7 @@
         var elemToRemoveArray = state.slice().filter(function (item) {
             return item.id === action.data.id;
         });
-        if (Array.isArray(elemToRemoveArray)) {
+        if (elemToRemoveArray.length !== 0) {
             var elemToRemoveIndex = state.indexOf(elemToRemoveArray[0]);
             return [].concat(_toConsumableArray(state.slice(0, elemToRemoveIndex)), _toConsumableArray(state.slice(elemToRemoveIndex + 1)));
         }
